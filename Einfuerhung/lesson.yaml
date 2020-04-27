@@ -1,0 +1,114 @@
+- Class: meta
+  Course: Computergestuetzte Datenanalyse
+  Lesson: Einfuehrung
+  Author: Simon Stuber
+  Type: Standard
+  Organization: Universitaet Koblenz/Landau
+  Version: 2.4.5
+
+- Class: text
+  Output: Willkommen zur ersten interaktiven R-Uebung. Bevor wir R kennenlernen, muessen wir uns kurz mit swirl beschaeftigen. Immer wenn sie (...) sehen, koennen Sie mit Enter fortfahrten. Druecken Sie nun Enter.  
+
+- Class: text
+  Output: In der Konsole (das Fenster unten links), werden Fragen/Aufgaben angezeigt. Tippen Sie die Antworten zu diesen Fragen immer in das Skript (das Fenster links oben). Evtl. wird Ihnen dieses Fenster noch nicht angezeigt. Dann muessen Sie zuerst ein neues Skript oeffnen. Um ein neues Skript zu oeffnen, muessen Sie auf File>new File>R Script klicken. Dann erscheint oben links ein neues Fenster. Das ist ihr Skript. Schreiben Sie bitte alle Antworten in eine neue Zeile in dieses Skript. Wenn Sie Ihre Antwort eingegeben haben, muessen Sie den Befehl ausfuehren. Dabei muss ihr Cursor in der Zeile stehen, in welcher Ihre Antwort steht. Dabei ist es egal ob der Curser am Anfang, in der Mitte oder am Ende der Zeile steht. Um den Befehl auszufuehren, muessen Sie dann Strg + Enter druecken. 
+
+- Class: text
+  Output: Dann koennen wir jetzt mit der Lesson beginnen. Zu allererst, schauen wir uns an, wie wir R als Taschenrechner verwenden koennen.   
+
+- Class: cmd_question
+  Output: Tippen Sie 2 + 2 ein, sorgen Sie dafuer, dass ihr Cursor in der entsprechenden Zeile steht und druecken Sie Strg + Enter um die Eingabe auszufuehren.
+  CorrectAnswer: '2 + 2'
+  AnswerTests: omnitest(correctExpr='2+2')
+  Hint: Das war noch nicht ganz richtig. Haben Sie alles korrekt Uebernommen? Ueberpruefen Sie ihre Eingabe noch einmal. 
+
+- Class: text
+  Output: In der Konsole wird nun Ihre Eingabe in blau wiederholt. Darunter erscheint in schwarz der Ouput, also das Ergebnis. 
+
+- Class: cmd_question
+  Output: Rechnen Sie nun ((3-1)/2)*5
+  CorrectAnswer: ((3-1)/2)*5
+  AnswerTests: omnitest(correctExpr='((3-1)/2)*5')
+  Hint: Das stimmt noch nicht ganz. Haben Sie alle Klammern richtig gesetzt und alle Symbole korrekt uebernommen? Ueberpruefen Sie Ihre Eingabe nocheinmal. 
+
+- Class: text
+  Output: Wie Sie sehen, koennen Sie verschiedene Operatoren verwenden zum Addieren (+), Subtrahieren (-), Multiplizieren (*) und Dividieren (/). Achten Sie bei der Eingabe immer auf die richtige Klammersetzung. 
+
+- Class: text
+  Output: Im naechsten Schritt, lernen wir Funktionen kennen. Funktionen haben immer den gleichen Aufbau; name.der.funktion(Argumente).
+
+- Class: cmd_question
+  Output: Tippen sie sqrt(4)
+  CorrectAnswer: sqrt(4)
+  AnswerTests: omnitest(correctExpr='sqrt(4)')
+  Hint: Ihre Eingabe war noch nicht ganz korrekt. Alles muss exakt so eingeben werden wie vorgegeben. Tippen sie sqrt(4) und fuehren Sie die Eingabe mit Strg + Enter aus. 
+
+- Class: text
+  Output: Sie haben soeben Ihre erste Funktion verwendet. Diese Funktion traegt den Namen sqrt, fuer square root, und berechnet die Quadratwurzel. Zwischen den Klammern, steht das Argument. Argumente sind Informationen die benoetigt werden um die Funktion auszufuehren. Die sqrt Funktion hat nur ein Argument, naemlich die Zahl aus der die Wurzel gezogen werden soll. Um die Hilfeseite einer Funktion aufzurufen, tippen sie ?name.der.funktion
+
+- Class: cmd_question
+  Output: Tippen sie ?sqrt
+  CorrectAnswer: ?sqrt
+  AnswerTests: omnitest(correctExpr='?sqrt')
+  Hint: Haben Sie alles korrekt eingegeben? Tippen Sie ?sqrt und fuehren Sie die Eingabe aus. 
+
+- Class: text
+  Output: Im rechten unteren Fenster wurde jetzt unter dem Help-Reiter die Hilfeseite der sqrt Funktion geoeffnet. Dort finden Sie mehr Infos zu der Funktion. Jede Funktion in R hat eine solche Hilfeseite.  
+
+- Class: text
+  Output: Im naechsten Schritt, schauen wir uns an, wie wir Objekte erstellen. In Objekten koennen z.B. Zahlen, Text, statistische Modelle oder Datensaetze hinterlegt werden. 
+
+- Class: cmd_question
+  Output: Tippen Sie 'objekt1 <- 4' 
+  CorrectAnswer: 'objekt1 <- 4'
+  AnswerTests: omnitest(correctExpr='objekt1 <- 4')
+  Hint: Achten Sie bei der Eingabe darauf, dass weder der Pfeil noch der Name des Objekts Leerzeichen enthalten. Lassen sie die Anfuehrungszeichen weg. Ausserdem ist es wichtig Gross- und Kleinschreibung zu beachten.
+
+- Class: text
+  Output: Oben rechts im Environment-Reiter werden Objekte angezeigt. Wie Sie sehen, ist dort jetzt ein neues Objekt erschienen mit dem Namen objekt1. In diesem objekt ist die Zahl 4 hinterlegt. Sie koennen auch mehrere Zahlen in einem Objekt hinterlegen.  
+
+- Class: cmd_question
+  Output: Tippen Sie 'objekt2 <- c(4,9,16)' 
+  CorrectAnswer: 'objekt2 <- c(4,9,16)'
+  AnswerTests: omnitest(correctExpr='objekt2 <- c(4,9,16)')
+  Hint: Haben Sie an das c vor der Klammer gedacht? Sind alle Kommas richtig gesetzt? Ueberpruefen Sie Ihre Eingabe noch einmal. 
+
+
+- Class: text
+  Output: Wieder ist das neue Objekt mit dem Namen objekt2 oben rechts erschienen. In diesem Objekt sind nun die Zahlen 4, 9 und 16 hinterlegt. Damit R weiss, dass diese Zahlen zusammengehoeren, verwenden wir die c() Funktion. Immer wenn wir mehrere Dingen gebuendelt ansprechen wollen, verwenden wir die c() Funtion. Sie koennen nun mit diesem Objekt weiterarbeiten. 
+
+- Class: cmd_question
+  Output: Tippen Sie sqrt(objekt2) 
+  CorrectAnswer: 'sqrt(objekt2)'
+  AnswerTests: omnitest(correctExpr='sqrt(objekt2)')
+  Hint: Haben Sie alles korrekt uebernommen? Wahrscheinlich hat sich irgendwo ein Tippfehler eingeschlichen. Achten Sie ausserdem auf Gross- und Kleinschreibung. 
+
+
+- Class: text
+  Output: Sie haben nun das Objekt objekt2 als Argument an die sqrt Funktion gegeben. Im Output wurde nun die Wurzel gezogen aus jeder einzelnen Zahl im Objekt. 
+
+- Class: cmd_question
+  Output: Tippen Sie rm(objekt1,objekt2) 
+  CorrectAnswer: 'rm(objekt1,objekt2)'
+  AnswerTests: omnitest(correctExpr='rm(objekt1,objekt2)')
+  Hint: Haben Sie alles korrekt uebernommen? Sind alle Klammern richtig gesetzt? Wahrscheinlich hat sich irgendwo ein Tippfehler eingeschlichen. Achten Sie ausserdem auf Gross- und Kleinschreibung. 
+
+- Class: text
+  Output: Sie haben nun die beiden Objekte objekt1 und objekt2 geloescht. Wie Sie sehen, sind die Objekte auch aus der Environment im Fenster oben rechts verschwunden. 
+  
+- Class: text  
+  Output: Im letzten Schritt, wollen wir ein Arbeitsverzeichnis festlegen und das Skript speichern. Ein Arbeitsverzeichnis ist ein Ordner, in welchem R arbeitet. Dort liegt z.B. ihr Skript, Ihr Datensatz und andere Dateien die zu Ihrem Projekt gehoeren. Damit R weiss, wo diese Dateien liegen, muessen Sie das Arbeitsverzeichnis festlegen. Das laesst sich leider nich in swirl ueben. Hier aber dennoch eine kurze Anleitung. Oeffnen Sie den Ordner den Sie als Arbeitsverzeichnis festgelegt haben in einem neues Fenster (nicht in R). Ermitteln Sie dann den Pfad des Ordners. In Windows koennen Sie den Pfad ermitteln, in dem Sie einen Doppelklick in die Leiste machen im oberen Bereich des Ordner-Fensters, dort wo steht in welchem Ordner Sie sich befinden. Nach dem Doppelklick, sollten Sie den Pfad des Ordners sehen. Das sieht dann z.B. so aus 'C:\Users\Simon\Desktop\Swirl\Computergestuetzte_Datenanalyse'. Kopieren Sie diesen Pfad. Gehen Sie nun zurueck in R und tippen Sie folgenden Befehl setwd('C:/Users/Simon/Desktop/Swirl/Computergestuetzte_Datenanalyse'). Natuerlich muessen Sie bei der Eingabe den hier verwendeten Pfad durch Ihren eigenen Pfad ersetzen. Beachten Sie ausserdem, dass die Slashes von \ zu / geaeandert werden muessen. Das ist wichtig, da R den Pfad sonst nicht erkennt. Wenn alles korrekt ist, Sie den Dateipfad kopieren konnten und Ihre Slashes richtig herum stehen (/), koennen Sie den Befehl ausfuehren. Ueberpruefen Sie ob das festlegen des Arbeitsverzeichnisses geklappt hat indem sie getwd() tippen und den Befehl ausfuehren. 
+  
+- Class: cmd_question
+  Output: Tippen Sie getwd() und fuehren Sie den Befehl aus.  
+  CorrectAnswer: 'getwd()'
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Das war noch nicht richtig. Haben Sie den Befehl korrekt uebernommen? Ueberpruefen Sie Ihre Eingabe. 
+  
+- Class: text  
+  Output: Wenn Sie alles richtig gemacht haben, wurde Ihnen durch die getwd() Funktion exakt der Pfad angezeigt, welchen Sie als Arbeitsverzeichnis festgelegt haben. Sie koennen nun das Skript speichern. Es wird dann in dem Ordner des Arbeitsverzeichnisses hinterlegt. Klicken Sie dafuer auf File>Save As... und benennen Sie ihr Skript. Evtl. kommt noch ein Fenster in dem nach dem Encoding gefragt wird. An dieser Stelle koennen Sie einfach auf ok klicken. 
+  
+  
+- Class: text  
+  Output: Das war die erste Lesson! Naechste Woche lernen wir, wie wir Daten in R einlesen und bearbeiten koennen. Bis naechste Woche!
+  
+
